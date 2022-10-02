@@ -35,4 +35,4 @@
 
 - Publish your work (using netlify/heroku/github pages etc.) and send us links to both your published work and repo!
 
-URL:
+URL: https://test-whale-traffic-client-yowq.vercel.app/
