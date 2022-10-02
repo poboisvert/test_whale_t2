@@ -11,7 +11,7 @@ const Traffic = () => {
           background: '#FFF2C5',
           border: '#FFCD1B',
           fontColor: '#8E7004',
-          timeout: 8000,
+          timeout: 4000,
         };
       case 'yellow':
         return {
@@ -20,7 +20,7 @@ const Traffic = () => {
           background: '#FFD3D3',
           border: '#FF1B1B',
           fontColor: '#930101',
-          timeout: 4000,
+          timeout: 8000,
         };
       case 'red':
         return {
@@ -54,12 +54,11 @@ const Traffic = () => {
       if (remaningTime > 0) {
         --remaningTime;
       }
-      setTime(remaningTime);
 
       // Action when timer is 0
       if (remaningTime === 0) {
         let nextLight = getUpcoming(light.color);
-        remaningTime = getUpcoming(nextLight.color).timeout / 1000;
+        remaningTime = getUpcoming(light.color).timeout / 1000;
         setLight(nextLight);
       }
 
